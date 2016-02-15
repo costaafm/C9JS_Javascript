@@ -3,9 +3,9 @@
 <HEAD>
 <TITLE> 6-CONDITIONAL LOGIC IN JAVASCRIPT </TITLE>
 <script type="text/javascript">
-
+/*
 var someValue=25;
-var otherValue=24;
+var otherValue=24; */
 
 /*if (someValue<30) {
 alert("first case");
@@ -44,11 +44,16 @@ alert("somevalue is not !== 25");
 if (!someValue) {
 alert("not operator !");
 }
+
 */
+
+/*
 
 var myResult="";
 myResult=(someValue===24) ? "equal" : "not equal";
 alert (myResult);
+
+*/
 
 /*
 Internet Explorer 11 - F12 - Developer tools.
@@ -80,6 +85,47 @@ terminal>> myResult=(3 === "3") ? "True" : "False";
 terminal>> "False"
 
 */
+
+/*
+var userName="Bob";
+switch (userName)
+{
+case "John":
+document.write("care for a good fried fish?");
+break;
+case: "Bob":
+document.write("Welcome back , smeg head");
+break;
+default:
+document.write("Are you an emohawk?");
+break;
+
+}
+
+*/
+
+var rightNow=new Date();
+var currentHour= rightNow.getHours();
+switch(true)
+{
+case (currentHourt>8 && currentHour<12):
+document.write("Morning!");
+break;
+
+case (currentHourt===12):
+document.write("Lunch!");
+break;
+
+case (currentHourt>12 && currentHour<18):
+document.write("Fight Siesta!");
+break;
+
+default:
+document.write("Hard working sparky!");
+break;
+
+
+}
 
 
 </script>
