@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--
+Considere o seguinte código html:
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h3>Anchors</h3>
+        <a href='#'>Anchor Element</a>
+        <a href='#'>Anchor Element</a>
+        <a href='#'>Anchor Element</a>
+        <script src="js/jquery-1.11.3.js"></script>
+        <script>
+            function removeElemento(e){
+                e.preventDefault();
+                this.remove(); 
+            }
+            
+            $('h3').on('click', function(){
+                var nlink = $('<a href="#">Anchor Element</a>');
+                nlink.on('click', removeElemento);
+                $('body').append(nlink);
+            });
+            
+            $('a').on('click', removeElemento);
+            
+            
+        </script>
+    </body>
+</html>
+
+<!--
+Escreva script, utilizando jQuery, que permita que:
+   a. quando clicar no elemento h3 deve ser inserido na árvore DOM um novo elemento <a> em tudo semelhante aos já existentes no documento.
+   b. quando ciclar em cima de um elemento <a> esse elemento deve ser removido da árvore DOM.
+-->

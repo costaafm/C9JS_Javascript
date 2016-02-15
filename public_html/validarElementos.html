@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form id="picker">
+            <label>Value 1:</label> <input type="text" id="first" /><br />
+            <label>Value 2:</label> <input type="text" id="second" /><br />
+            <label>Value 3:</label> <input type="text" id="third" /><br />
+            <label>Value 4:</label> <input type="text" id="four" /><br />
+            <button id="validate">Validate</button>
+        </form>
+        <div id="result"></div>
+        <script>
+            // get the form element names and values and validate
+            document.getElementById('validate').addEventListener('click',function (evnt) {
+                evnt.preventDefault();
+                // create array of element key/values
+                var elems = document.getElementById("picker").elements;
+                var elemArray = new Object();
+                for (var i = 0; i < elems.length; i++) {
+                    if (elems[i].type == "text") 
+                        elemArray[elems[i].id] = elems[i].value;
+                }
+                var str = '';
+                Object.keys(elemArray).forEach(function (key) {
+                    var value = elemArray[key];
+                    str+=key + '->' + value + '<br />';
+                });
+                document.getElementById("result").innerHTML = str;
+            }, false);
+        </script>
+    </body>
+</html>

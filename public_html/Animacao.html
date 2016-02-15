@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Chapter 6</title>
+        <style>
+            .box{
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                color:white;
+            }
+        </style>
+    </head>
+    <body id="single">
+        <input type="button" id="animate" value="animate" />
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <script src="js/jquery-1.11.3.js"></script>
+        <script>
+            $(function () {
+                /*$('#animate').click(function () {
+                    if($('.box').is(':hidden')){
+                        $('.box').show();
+                    }
+                    else{
+                        $('.box').hide();
+                    }
+                    
+                });*/
+        
+                /*$('#animate').click(function () {
+                    if($('.box').is(':hidden')){
+                        $('.box').fadeIn('slow');
+                    }
+                    else{
+                        $('.box').fadeOut('slow');
+                    }
+                });*/
+                
+                
+                /*$('#animate').click(function () {
+                    $('.box').slideToggle('slow');   
+                });*/
+        
+                $('#animate').click(function () {
+                    $('.box').animate({opacity: 'toggle', height: 'toggle'}, 'slow');
+                });
+                
+            });
+        </script>
+    </body>
+</html>

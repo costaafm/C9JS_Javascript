@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+2.	Apresentar , utilizando o método alert, uma tabela dos números de 5 a 15  e os respetivos quadrados e cubos.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var tabela = "<table><tr><th>Números</th><th>Quadrados</th><th>Cubos</th>";
+            for(var i = 5; i <= 15; i++){
+                tabela += "<tr><td>" + i + "</td>" +
+                        "<td>" + Math.pow(i, 2) + "</td>" +
+                        "<td>" + Math.pow(i, 3) + "</td></tr>" 
+            }
+            document.write(tabela);
+        </script>
+    </body>
+</html>

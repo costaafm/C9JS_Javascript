@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table id="table1">
+        <tr>
+            <td>Washington</td><td class="quant">145</td>
+        </tr>
+        <tr>
+            <td>Oregon</td><td class="quant">233</td>
+        </tr>
+        <tr>
+            <td>Missouri</td><td class="quant">833</td>
+        </tr>
+        </table>
+        <input type="button" id="botao" value="Soma" />
+        <script>
+            function soma(){
+                var sum = 0;
+                
+                var cells = document.getElementsByClassName('quant');
+                // ou 
+                // var cells = document.querySelectorAll("#quant");
+                for (var i = 0; i < cells.length; i++)
+                    sum+=parseFloat(cells[i].firstChild.data);
+                  // acrescentar soma ao fim da tabela
+                var newRow = document.createElement("tr");
+                // primeira célula
+                var firstCell = document.createElement("td");
+                var firstCellText = document.createTextNode("Sum:");
+                firstCell.appendChild(firstCellText);
+                newRow.appendChild(firstCell);
+                // segunda célula
+                var secondCell = document.createElement("td");
+                var secondCellText = document.createTextNode(sum);
+                secondCell.appendChild(secondCellText);
+                newRow.appendChild(secondCell);
+                // adicionar linha à tabela
+                document.getElementById("table1").appendChild(newRow);
+            }
+            
+            var botao = document.getElementById('botao');
+            botao.addEventListener('click', soma, false);
+            
+        </script>
+    </body>
+</html>

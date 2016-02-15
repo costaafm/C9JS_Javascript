@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <form>
+            <input name="" type="checkbox" />
+            <input name="" type="radio" />
+            <input name="" type="text" />
+            <input name="" type="button" />
+        </form>
+        <form>
+            <input name="" type="checkbox" />
+            <input name="" type="radio" />
+            <input name="" type="text" />
+            <input name="" type="button" />
+        </form>
+        <input name="" type="checkbox" />
+        <input name="" type="radio" />
+        <input name="" type="text" />
+        <input name="" type="button" />
+        <script type="text/JavaScript" src="js/jquery-1.11.3.js"></script>
+        <script>
+            alert('selected ' + $('form input').length + ' inputs');
+            alert('selected ' + $('form')[0].length + ' inputs');
+            alert('selected ' + $('body input').length + ' inputs');
+        </script>
+    </body>
+</html>

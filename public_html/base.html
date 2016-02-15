@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <p>The exec() method returns the matched text if it finds a match, otherwise it returns null.</p>
+        <p>Click the button to search a string for the character "e".</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function myFunction() {
+                var str = "The best things in life are free";
+                var patt = new RegExp("e","g");
+                var res = '';
+                var padrao;
+                while((padrao = patt.exec(str)) != null){
+                    res += '<br/>Posição ' + padrao.index + ': ' + padrao[0];
+                }
+                document.getElementById("demo").innerHTML = res;
+            }
+        </script>
+
+    </body>
+</html>

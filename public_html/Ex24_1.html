@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id = "tabela">Exercicio 24</p>
+
+
+<script>
+var tarefas = [
+{"tarefa": function() {
+return 'Tarefa 1';
+}
+},
+{"tarefa": function() {
+return 'Tarefa 2';
+}
+},
+{"tarefa": function() {
+return 'Tarefa 3';
+}
+}
+];
+
+
+function constroiIterador(x){
+	var i = 0;
+
+	return {
+            next: function (){
+                return {value: x[i++]};
+            }
+        }
+}
+
+var sequenciaTarefas = constroiIterador(tarefas);
+var y = sequenciaTarefas.next().value.tarefa();
+//sequenciaTarefas.next().tarefa();
+document.write(y);
+y = sequenciaTarefas.next().value.tarefa();
+document.write(y);
+     
+ 
+
+</script>
+
+
+</body>
+</html>  

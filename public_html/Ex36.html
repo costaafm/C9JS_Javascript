@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Overlay</title>
+        <style>
+        .overlay
+        {
+            background-color: #000;
+            opacity: .5;
+            filter: alpha(opacity=50);
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 10;
+        }
+        .overlaymsg
+        {
+            position: absolute;
+            background-color: yellow;
+            padding: 10px;
+            width: 500px;
+            height: 200px;
+            font-size: 2em;
+            z-index: 11;
+            top: 50%;
+            left: 35%;
+            margin-left: -100px;
+            margin-top: -100px;
+        }
+        </style>
+        
+    </head>
+    <body>
+        <p>Existing material.</p>
+        <script>
+            function displayPopup() {
+                // Cria um overlay para esbater a página
+                var overlay = document.createElement("div");
+                overlay.setAttribute("id","overlay");
+                overlay.setAttribute("class", "overlay");
+                document.body.appendChild(overlay);
+                overlay.addEventListener('click', restore, false);
+                // Cria a div da mensagem
+                var msg = document.createElement("div");
+                var txt = document.createTextNode("Não se esqueça de indicar a sua mailing list! (Clique nesta janela para fechar)");
+                msg.appendChild(txt);
+                msg.setAttribute("id", "msg")
+                msg.setAttribute("class","overlaymsg");
+                // adiciona o ecento para fechar a caixa da mensagem
+                msg.addEventListener('click', restore, false);
+                // adiciona o caixa da mensagem ao corpo da página
+                document.body.appendChild(msg);
+            }
+            // Repõe a página
+            function restore() {
+                document.body.removeChild(document.getElementById("overlay"));
+                document.body.removeChild(document.getElementById("msg"))
+            }
+            
+            window.addEventListener('load', function() {
+                displayPopup();
+            }, false);
+        </script>
+    </body>
+</html>

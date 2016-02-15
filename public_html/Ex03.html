@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var ant1 = 1, ant2 = 1, novo;
+            var contador = 2;
+
+            document.write("<h1>20 primeiros números da série de Fibonacci</h1>");
+            document.write(ant1, ", ", ant2)
+            /*
+            while(contador < 20){
+                novo = ant1 + ant2;
+                document.write(", ", novo);
+                ant1 = ant2;
+                ant2 = novo;
+                contador++;
+            } 
+            */
+
+            for(; contador < 20; contador++){
+                novo = ant1 +ant2;
+                document.write(", ", novo);
+                ant1 = ant2;
+                ant2 = novo;
+            }
+        </script>
+    </body>
+</html>

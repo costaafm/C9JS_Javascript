@@ -1,0 +1,17 @@
+ o enunciado conterá 6 grupos de questões que pretendem cobrir os conteúdos lecionados, a saber:
+
+Grupo I (2 valores): conterá questões de resposta rápida relacionadas com os fundamentos da linguagem (variáveis, operadores, estruturas de controlo, conversões, tipos de dados, etc.).
+
+Grupo II (2 valores): conterá 2 questões que pretendem a escrita de pequenos pedaços de código que permitem avaliar a capacidade de desenvolver pequenas funções, manipular arrays, strings e utilizar os objetos nativos do JavaScript.
+
+Grupo III (4 valores): conterá 2 questões que pretende a escrita de pequenos pedaços de código que avaliem os conhecimentos relacionados com a criação de objetos e utilização avançada de funções (manipulação de argumentos, funções anónimas, e as tecnicas de callback, inner functions, getters/setters e closures);  
+
+Grupo IV (4 valores): conterá uma ou duas questões de escrita de código que pretende avaliar os conhecimentos para manipular os princípios  e as técnicas da herança em JavaScript (funções construtoras, a propriedade prototype, herança por cópia, herança mista e herança múltipla);
+
+Grupo V (4 valores): conterá uma ou duas questões de escrita de código que pretende, utilizando "JavaScript puro”, avaliar os conhecimentos no que se refere: 1) à manipulação da árvore DOM (aceder, inserir, alterar e eliminar elementos da árvore, atributos e conteúdo dos elementos) 2) aos eventos e 3) à utilização de AJAX .
+
+Grupo VI (4 valores): conterá uma ou duas questões de escrita de código que pretende avaliar os conhecimentos no que se refere à manipulação, através da biblioteca JQuery, dos elementos de uma página através dos seletores, dos eventos e da utilização do AJAX .
+
+Como podem verificar, irei privilegiar a escrita de código. O que pretendo é que me mostrem que dominam os fundamentos da linguagem JavaScript e do JQuery, nas vertentes acima enunciadas. As apresentações que vos forneci, os exemplos de demonstração disponibilizados e a lista de exercícios fornecidos são o campo de estudo que cobrem os conteúdos indicados. Podem e devem ler outra bibliografia. 
+
+Não se esqueçam que se trata de um exame escrito e que as questões de correção sintática são menos relevantes que o conhecimento da linguagem e das suas técnicas.

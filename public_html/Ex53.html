@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 80%;
+            }
+            table, tr, td{
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="tabelanomes">
+        </table>
+        <!-- via Jquery -->
+        <script src="js/jquery-1.11.3.js" ></script>
+        <script>
+            // Return a sanitized version of text with & < > escaped for HTML
+            function esc( text ) {
+                return text
+                .replace( '&', '&amp;' )
+                .replace( '<', '&lt;' )
+                .replace( '>', '&gt;' );
+            }
+            
+            $(function() {
+                function fillTable( names ) {
+                    $.each( names, function() {
+                        $('<tr>')
+                            .append( $('<td>').addClass('name').html(
+                            esc(this.first) + ' ' + esc(this.last)
+                            ) )
+                            .append( $('<td>').addClass('address').html(
+                            esc(this.street) + '<br />' +
+                            esc(this.city) + ', ' +
+                            esc(this.state) + ' ' + esc(this.zip)
+                            ) )
+                            .appendTo('#tabelanomes');
+                        });
+                    }
+                $.getJSON( 'dados/nomes.json', function( json ) {
+                    fillTable( json.names );
+                });
+            });
+        </script>
+        
+        <!-- via javascript
+        <script>
+            var xhr = new XMLHttpRequest();
+            
+            xhr.onload = function(){
+                if(xhr.status === 200){
+                    resposta = JSON.parse(xhr.responseText);
+                    var linhastabela = '';
+                    for(var i = 0; i < resposta.names.length; i++){
+                        linhastabela += '<tr><td>' + resposta.names[i].first +
+                                ' ' + resposta.names[i].last + '</td>' +
+                                '<td>' + resposta.names[i].street + '<br/> ' +
+                                resposta.names[i].city + '</td></tr>';
+                    }
+                    document.getElementById('tabelanomes').innerHTML = linhastabela;
+                }
+            }
+            
+            
+            xhr.open('GET', 'dados/nomes.json', true);
+            xhr.send(null);
+        </script>
+        -->
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p><img src="firstimage.jpg" alt="image description" />img1</p>
+        <p><img src="secondimage.jpg" alt="image description" />img2</p>
+        <p><img src="thirdimage.jpg" alt="image description" />img3</p>
+        <script>
+            var imgs = document.getElementsByTagName('img');
+            console.log(imgs.length);
+            var p = document.createElement("p");
+            var texto = document.createTextNode("img4")
+            var img = document.createElement("img");
+            img.src="someimg.jpg";
+            img.alt="image description";
+            p.appendChild(img);
+            p.appendChild(texto);
+            var nosirmaos = document.getElementsByTagName('p');
+            nosirmaos[0].parentNode.appendChild(p);
+            //var b = document.getElementsByTagName('body');
+            //b[0].appendChild(p);
+        </script>
+</body>
+</html>

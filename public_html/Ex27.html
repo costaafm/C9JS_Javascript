@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id = "tabela">Exercicio 27</p>
+
+
+<script>
+
+
+function livro(titulo, autor){
+	this.titulo = titulo;
+	this.autor = autor;
+}
+
+livro.prototype.getAutor = function(){
+    return this.autor;
+}
+	
+livro.prototype.getTitulo = function(){
+    return this.titulo;
+}
+
+function livroTecnico(titulo, autor, categoria){
+	this.categoria = categoria;
+	this.titulo = titulo;
+	this.autor = autor;
+	this.getLivro = function(){
+	
+		document.write(this.titulo + ", " + this.autor + ", " + this.categoria);
+		
+	}
+
+}
+
+livroTecnico.prototype = new livro();
+livroTecnico.prototype.constructor = livroTecnico;
+
+
+var valor =  new livroTecnico("Maias" , "Eca de Queiroz", "Portugues");
+
+valor.getLivro();
+
+document.write('<br/>' + valor.getAutor());
+
+document.write('<br/>' + valor.getTitulo());
+
+</script>
+
+
+</body>
+</html> 

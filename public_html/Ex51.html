@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Eastern Conference</h2>
+        <ol id="east">
+            <li>Boston Bruins</li>
+            <li>Washington Capitals</li>
+            <li>New Jersey Devils</li>
+            <li>Pittsburgh Penguins</li>
+            <li>Philadelphia Flyers</li>
+            <li>Carolina Hurricanes</li>
+            <li>New York Rangers</li>
+            <li>Montreal Canadians</li>
+            <li>Florida Panthers</li>
+            <li>Buffalo Sabres</li>
+            <li>Ottawa Senators</li>
+            <li>Toronto Maple Leafs</li>
+            <li>Atlanta Thrashers</li>
+            <li>Tampa Bay Lightning</li>
+            <li>New York Islanders</li>
+        </ol>
+        <h2>Western Conference</h2>
+        <ol id="west">
+            <li>San Jose Sharks</li>
+            <li>Detroit Red Wings</li>
+            <li>Vancouver Canucks</li>
+            <li>Chicago Blackhawks</li>
+            <li>Calgary Flames</li>
+            <li>St. Louis Blues</li>
+            <li>Columbus Blue Jackets</li>
+            <li>Anaheim Ducks</li>
+            <li>Minnesota Wild</li>
+            <li>Nashville Predators</li>
+            <li>Edmonton Oilers</li>
+            <li>Dallas Stars</li>
+            <li>Phoenix Coyotes</li>
+            <li>Los Angeles Kings</li>
+            <li>Colorado Avalanche</li>
+        </ol>
+        <script src="js/jquery-1.11.3.js"></script>    
+        <script>
+            (function($){
+                $(function(){
+                    $("ol#east > li").eq(7).css("border-bottom", "1px solid #000000");
+                    $("ol#west > li").eq(7).css("border-bottom", "1px solid #000000");
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>

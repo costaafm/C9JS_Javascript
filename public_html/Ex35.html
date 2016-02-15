@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Adding and Removing Elements</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table {
+            border-collapse: collapse;
+            }
+            td, th {
+            padding: 5px;
+            border: 1px solid #ccc;
+            }
+            tr:nth-child(2n+1)
+            {
+            background-color: #eeffee;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="mixed">
+            <tr><th>Value One</th><th>Value two</th><th>Value three</th></tr>
+        </table>
+        <div id="result"></div>
+        <script>
+            var values = new Array(3);
+            values[0] = [123.45, "apple", true];
+            values[1] = [65, "banana", false];
+            values[2] = [1034.99, "cherry", false];
+            var mixed = document.getElementById("mixed");
+            var tbody = document.createElement("tbody");
+            // Por cada linha do array
+            for (var i = 0 ; i < values.length; i++) {
+                //Cria o elemento tr
+                var tr = document.createElement("tr");
+                // Por cada valor 
+                // cria o elemento td e o seu conteúdo
+                for (var j = 0; j < values[i].length; j++) {
+                    var td = document.createElement("td");
+                    var txt = document.createTextNode(values[i][j]);
+                    td.appendChild(txt);
+                    tr.appendChild(td);
+                }
+                // adiciona o evento clik à linha da tabela
+                tr.addEventListener('click', removeLinhaTabela, false)
+                // Adiciona a linha à tabela 
+                tbody.appendChild(tr);
+                mixed.appendChild(tbody);
+            }
+            
+            function removeLinhaTabela() {
+                // remove a linha selecionada da tabela
+                var parent = this.parentNode;
+                var oldrow = parent.removeChild(this);
+                // Obter o conteúdo da linha apagada para mostrar como parágrafo
+                var datastring = "";
+                for (var i = 0; i < oldrow.childNodes.length; i++) {
+                    var cell = oldrow.childNodes[i];
+                    datastring+=cell.firstChild.data + "; ";
+                }
+                // mostra o conteúdo da linha removida num parágrafo
+                var msg = document.createTextNode("Linha apagada: " + datastring);
+                var p = document.createElement("p");
+                p.appendChild(msg);
+                document.getElementById("result").appendChild(p);
+            }
+        </script>
+    </body>
+</html>

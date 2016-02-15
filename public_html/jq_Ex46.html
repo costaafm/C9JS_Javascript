@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--
+Considere o seguinte código html:
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <ul>
+        <li class='remove'>name</li>
+        <li>name</li>
+        <li class='remove'>name</li>
+        <li class='remove'>name</li>
+        <li>name</li>
+        <li class='remove'>name</li>
+        <li>name</li>
+        <li class='remove'>name</li>
+        </ul>
+        <button>Substitui</button>
+        
+        <script src="js/jquery-1.11.3.js"></script>
+        <script>
+            $('button').on('click', function(e){
+                e.preventDefault();
+                $('li.remove').text('removido')
+                // ou
+                //$('li.remove').replaceWith('<li>removed</li>');
+            });
+        </script>
+    </body>
+</html>
+
+<!--
+Escreva um script, utilizando jQuery, substitua os items da lista com a class "remove" por um item com o conteúdo textual "removido". 
+-->

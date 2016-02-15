@@ -1,0 +1,19 @@
+{
+    "eventos":[
+        {
+            "local": "São Francisco, CA",
+            "data": "1 de Maio 2016",
+            "mapa": "imagens/map-ca.png"
+        },
+        {
+            "local": "Austin, TX",
+            "data": "15 de Maio 2016",
+            "mapa": "imagens/map-tx.png"
+        },
+        {
+            "local": "Nova York, NY",
+            "data": "30 de Maio 2016",
+            "mapa": "imagens/map-ny.png"
+        }
+    ]
+}

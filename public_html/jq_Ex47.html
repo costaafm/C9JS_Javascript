@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <script type="text/JavaScript"
+        src="js/jquery-1.11.3.js"></script>
+        <script>
+        // através do .find + .attr
+        $('<p><a>jQuery 1</a></p>').find('a').attr('href','http://www.jquery.com').end().appendTo('body');
+        
+        // outra forma
+        var link = $('<p><a>jQuery 2</a</p>');
+        link.find('a').attr('href','http://www.jquery.com');
+        $('body').append(link);
+        
+        // adicionando diretamente o html ao elemento
+        $('body').append('<p><a href="http://www.jquery.com">jQuery 3</a></p>');
+        </script>
+    </body>
+</html>

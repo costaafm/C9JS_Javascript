@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Procurar palavras</title>
+        <meta charset="UTF-8">
+        <style>
+        .found{
+            background-color: #ff0;
+        }
+        </style>
+    </head>
+    <body>
+        <form id="texto">
+            <textarea id="editor" cols="150" rows="10">
+            </textarea>
+            <p>
+                Procura dp padrao: <input id="padrao" type="text" />
+            </p>
+        </form>
+        <button id="procurar">Encontrar padrões</button>
+        <div id="resultadopesquisa"></div>
+        <script>
+            document.getElementById("procurar").addEventListener('click', destaca, false); 
+            
+            function destaca() {
+                // obtem o padrao
+                var padrao = document.getElementById("padrao").value;
+                //var re = new RegExp(padrao,"g");
+                //var re = padrao;
+                // obtem a string
+                var texto = document.getElementById("editor").value;
+                //var Arraycorrespondencias;
+                var resultadoString = "<p>";
+                var primeiro=0;
+                /* Um solução
+                // var ultimo=0;
+                //var ac = re.exec(texto)
+                //var testeexec = '<p>' + ac.toString() + '<p>';
+                //resultadoString += testeexec;
+                // procura correspondências
+                while((Arraycorrespondencias = re.exec(texto)) != null) {
+                    //obtem a posição da primeira correspondência 
+                    ultimo = Arraycorrespondencias.index;
+                    // Obter as correspondencias e concatenar
+                    resultadoString += texto.substring(primeiro, ultimo);
+                    // adicionar a correspondência dentro da class found 
+                    resultadoString += "<span class='found'>" + Arraycorrespondencias[0] + "</span>";
+                    //primeiro = re.lastIndex;
+                    primeiro = ultimo + Arraycorrespondencias[0].length;
+                }
+                */ 
+               // Outra solução
+                var primeiro = 0;
+                var ultimo;
+                while((ultimo = texto.search(padrao)) != -1){
+                    //var ultimo = texto.search(re);
+                    resultadoString += texto.substring(primeiro, ultimo);
+                    resultadoString += "<span class='found'>" + padrao + "</span>";
+                    //primeiro = ultimo + padrao.length;
+                    texto = texto.substring(ultimo+padrao.length, texto.length);
+                }
+                // finish off string
+                resultadoString += texto.substring(primeiro,texto.length);
+                resultadoString += "</p>";
+                // insert into page
+                document.getElementById("resultadopesquisa").innerHTML = resultadoString;
+            }
+        </script>
+    </body>
+</html>

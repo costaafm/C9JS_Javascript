@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventos>
+    <evento>
+        <local>São Francisco, CA</local>
+        <data>1 de Maio de 2016</data>
+        <mapa>imagens/map-ca.png</mapa>
+    </evento>
+    <evento>
+        <local>Austin, TX</local>
+        <data>15 de Maio de 2016</data>
+        <mapa>imagens/map-tx.png</mapa>
+    </evento>
+    <evento>
+        <local>Nova York, NY</local>
+        <data>30 de Maio de 2016</data>
+        <mapa>imagens/map-ny.png</mapa>
+    </evento>
+</eventos>
