@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE> 6-CONDITIONAL LOGIC IN JAVASCRIPT </TITLE>
+<script type="text/javascript">
+
+var someValue=25;
+var otherValue=24;
+
+/*if (someValue<30) {
+alert("first case");
+}
+*/
+
+/*
+if (someValue>30) {
+alert("first case");
+}
+else if (someValue<30){
+alert ("second case");
+}
+*/
+
+/*
+if (someValue===25){
+alert ("equals to 25");
+}
+else {
+alert("none of the above");
+}
+
+if (someValue>20 && otherValue>20){
+alert ("both values greater then 20");
+}
+
+if (someValue===25 || otherValue===24){
+alert (" somevalue is 25 or otherValue is 24");
+}
+
+if (someValue!==25){
+alert("somevalue is not !== 25");
+}
+
+if (!someValue) {
+alert("not operator !");
+}
+*/
+
+var myResult="";
+myResult=(someValue===24) ? "equal" : "not equal";
+alert (myResult);
+
+/*
+Internet Explorer 11 - F12 - Developer tools.
+
+Console:
+
+terminal>> myResult= (False) ? "true":"false";
+terminal result>> "false"
+
+terminal>> myResult= typeof 24/"bob";
+terminal>> NaN
+
+terminal>> myResult=(24/"bob")? "true" : "false";
+terminal>>"false"
+
+terminal>> myResult=undefined ? "true" : "false";
+terminal>>"false"
+
+terminal>> myResult=typeof someUndefinedVariable ? "true" : "false";
+terminal>>"True"
+
+terminal>> myResult(3 == "3") ? "True" : "False";
+terminal>> Error X "Function Expected"
+
+terminal>> myResult=(3 == "3") ? "True" : "False";
+terminal>> "True"
+
+terminal>> myResult=(3 === "3") ? "True" : "False";
+terminal>> "False"
+
+*/
+
+
+</script>
+
+</HEAD>
+<BODY>
+<H1> 6-CONDITIONAL LOGIC IN JAVASCRIPT </H1>
+</BODY>
+</HTML>
