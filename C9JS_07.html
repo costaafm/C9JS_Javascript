@@ -17,14 +17,62 @@ alert("Howdy,"+myValue);
 myNewFunction("Partner!");
 */
 
+/*
 
 function add(firstNumber,secondNumber){
 return firstNumber+secondNumber;
-}var myResult= add(1,2);
+}
+var myResult= add(1,2);
 alert (myResult);
+*/
+
+/*
+function add() {
+var tempValue=0;
+for (i=0;i<arguments.length;i++)
+{tempValue+=arguments[i];
+}
+return tempValue;
+}
+var myValue=add(1,2,3,4,5);
+alert(myValue);
+*/
+
+/*
+var addMe = function(){
+return arguments[0] + arguments[1];
+}
+var myNewValue=addMe(2,3);
+alert(myNewValue);
+*/
+
+/*
+//Function Literal
+//var addMe=function bob() this does not work
+var addMe=function() {
+return arguments[0] + arguments[1];
+}
+//var myNewValue=bob(1,2);
+var myNewValue=addMe(1,2);
+alert(myNewValue);
+*/
+
+// Anonymous Function
+/* 
+var myResult=(function(){
+arguments[0]+arguments[1];
+})(2,3);
+alert(myResult);
+*/
+
+/*
+alert((function(){
+arguments[0]+arguments[1];
+})(2,2));
+*/
 
 
-</script>
+
 
 </HEAD>
 <BODY>
