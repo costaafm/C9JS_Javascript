@@ -62,7 +62,29 @@ var z=planet;
 document.write(z.name);
 */
 
+/*
 if (typeof planet.defense==="undefined") {
 	planet.defense="Ion Cannon";
 }
 document.write(planet.defense);
+*/
+
+/*
+for (member in planet)
+{
+	document.write("<br/>"+member+"==>"+planet[member]);
+}
+*/
+
+
+function car (make,model,year) {
+	this.make=make;
+	this.model=model;
+	this.year=year;
+}
+
+var myCar = new car("Eagle","Talon TSi","1994");
+var myOtherCar = new car("Dodge","Dart","1976");
+
+alert(myCar.model);
+alert(myOtherCar.model);
