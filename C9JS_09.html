@@ -4,13 +4,14 @@
 <TITLE> JAVASCRIPT LOOPING STATEMENTS </TITLE>
 <script type="text/javascript">
 
-/*
+
 var playList=[];
 playList[0]="one for the team";
 playList[1]="the joy formidable";
 playList[2]="Young the giant";
 playList[3]="washed out";
 
+/*
 //WHILE
 var i=0;
 WHILE (i<playList.length) {
@@ -28,9 +29,23 @@ document.write("Will print AT least once!");
 while (someResult)
 */
 
+/*
 // FOR LOOP
 for (var i=0; i<playList.length; i++){
 document.write("<br/> Now playing: "+playList);
+}
+*/
+
+//reverse order
+for (var i=playList.length-1;i>-1;i--){
+document.write("<br/> Now Playing: "+playList[i]);
+}
+
+
+
+//FOR ... IN
+for (i in playList){
+document.write("<br/> Now Playing: "+playList);
 }
 
 

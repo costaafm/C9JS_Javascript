@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE> 10. JAVASCRIPT Global scope vs Function scope </TITLE>
+<script type="text/javascript">
+
+/*
+if (true) {
+x="true";
+}
+alert(x);
+*/
+
+myScope="Global";
+
+(function(){alert("inside the function, the scope is : "+myScope);})()
+
+alert("outside the function, the scope is : "+myScope);
+
+
+
+
+
+
+</script>
+
+</HEAD>
+<BODY>
+<H1> 10. JAVASCRIPT Global scope vs Function scope!</H1>
+</BODY>
+</HTML>
