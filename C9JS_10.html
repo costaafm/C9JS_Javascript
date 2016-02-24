@@ -11,16 +11,54 @@ x="true";
 alert(x);
 */
 
+/* 
 myScope="Global";
 
 (function(){alert("inside the function, the scope is : "+myScope);})()
 
 alert("outside the function, the scope is : "+myScope);
+*/
+
+/*
+//myScope="Global";
+
+(function(){ var myScope="function"; alert("inside the function, the scope is : "+myScope); })()
+
+alert("outside the function, the scope is : "+myScope);
+
+*/
+
+/*
+myScope="Global";
+
+(function(){
+ var myScope="function"; 
+ myScope="I set this inside the function";
+ alert("inside the function, the scope is : "+myScope); })()
+
+alert("outside the function, the scope is : "+myScope);
+*/
+
+//myScope="Global";
 
 
+/*
+(function(){
+ 
+ if (true){
+ var myScope="function";
+ }
+ 
+ //var myScope="function"; 
+ //myScope="I set this inside the function";
+ alert("inside the function, the scope is : "+myScope); })()
 
+alert("outside the function, the scope is : "+myScope);
+*/
 
+myScope="Global";
 
+alert('window.myScope: '+window.myScope);
 
 </script>
 
