@@ -23,13 +23,22 @@ if (myElement!= null){
 }
 */
 
-
 //document.getElementById('second').innerHTML="See how i set the text here? ";
 
+/*
 var listOfParagraphs = document.getElementsByTagName('p');
-
 alert(listOfParagraphs.length);
 
 var secondParagraph = listOfParagraphs[1];
 alert(secondParagraph.innerHTML);
+*/
+
+myElement = document.getElementById('second');
+alert(myElement.parentNode.nodeName);
+
+
+
+
+
+
 }
